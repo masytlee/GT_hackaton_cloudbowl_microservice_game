@@ -18,6 +18,8 @@ class KotlinApplication {
             ServerResponse.ok().body(Mono.just("Let the battle begin!"))
         }
 
+        // add comment
+        
         POST("/**", accept(APPLICATION_JSON)) { request ->
             request.bodyToMono(ArenaUpdate::class.java).flatMap { arenaUpdate ->
                 println(arenaUpdate)
